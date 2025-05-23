@@ -1,0 +1,17 @@
+services:
+  webserver:
+    networks:
+      - astro_localstack_net
+  scheduler:
+    networks:
+      - astro_localstack_net
+  triggerer:
+    networks:
+      - astro_localstack_net
+  #airflow-worker:
+  #  networks:
+  #    - astro_localstack_net
+
+networks:
+  astro_localstack_net:
+    external: true
