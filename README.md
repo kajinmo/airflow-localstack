@@ -18,3 +18,6 @@ astro dev restart
 
 $ docker ps
 talvez eu tenha colocado o nome errado na hora de dar connect
+
+
+docker exec -it fake-redshift psql -U myuser mydatabase

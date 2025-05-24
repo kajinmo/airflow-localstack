@@ -1,16 +1,30 @@
 services:
   webserver:
+    volumes:
+      - ./include:/opt/airflow/include
     networks:
       - astro_localstack_net
   scheduler:
+    volumes:
+      - ./include:/opt/airflow/include
     networks:
       - astro_localstack_net
   triggerer:
+    volumes:
+      - ./include:/opt/airflow/include
     networks:
       - astro_localstack_net
-  #airflow-worker:
-  #  networks:
-  #    - astro_localstack_net
+  fake-redshift:
+    image: postgres:14
+    container_name: fake-redshift
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5439:5432"
+    networks:
+      - astro_localstack_net
 
 networks:
   astro_localstack_net:
