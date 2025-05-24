@@ -2,7 +2,6 @@
 
 ## parei em :
 Airflow com LocalStack (gpt)
-tenta ir direto no setup_network.sh
 
 1) criar o script setup_network.sh
 
@@ -18,3 +17,4 @@ astro dev restart
 
 
 $ docker ps
+talvez eu tenha colocado o nome errado na hora de dar connect
