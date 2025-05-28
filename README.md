@@ -62,7 +62,7 @@ Em OUTRO terminal bash:
 git clone https://github.com/kajinmo/airflow-localstack
 cd airflow-localstack
 code .
-chmod +x init.sh
+chmod +x start.sh
 bash start.sh
 ```
 
